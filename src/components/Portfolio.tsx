@@ -1,5 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import beatJerkyMockup from "@/assets/beat-jerky-mockup.jpg";
+import ismaniMockup from "@/assets/ismani-mockup.jpg";
+import wheelsIqMockup from "@/assets/wheels-iq-mockup.jpg";
+import fitnessAppMockup from "@/assets/fitness-app-mockup.jpg";
+import ecommerceMockup from "@/assets/ecommerce-mockup.jpg";
+import foodDeliveryMockup from "@/assets/food-delivery-mockup.jpg";
 
 const projects = [
   {
@@ -7,18 +13,42 @@ const projects = [
     description: "Flutter app with AI chat, feed, upload, premium plans.",
     tech: ["Flutter", "Firebase", "REST API", "AI"],
     gradient: "from-purple-500/20 to-pink-500/20",
+    image: beatJerkyMockup,
   },
   {
     title: "Isma'ni – Marketplace & Super App",
     description: "Multi-vendor service booking app with dashboards.",
     tech: ["Flutter", "Firebase", "Payment Gateway", "Maps API"],
     gradient: "from-blue-500/20 to-cyan-500/20",
+    image: ismaniMockup,
   },
   {
     title: "Wheels IQ – AR Vehicle Assistant",
     description: "AR/AI car maintenance with camera + object tracking.",
     tech: ["Flutter", "AR Core", "Machine Learning", "Computer Vision"],
     gradient: "from-orange-500/20 to-red-500/20",
+    image: wheelsIqMockup,
+  },
+  {
+    title: "FitTrack Pro – Fitness & Wellness App",
+    description: "Comprehensive workout tracking with AI-powered exercise recommendations and health metrics.",
+    tech: ["Flutter", "Firebase", "HealthKit", "ML Kit"],
+    gradient: "from-green-500/20 to-teal-500/20",
+    image: fitnessAppMockup,
+  },
+  {
+    title: "ShopEase – E-Commerce Platform",
+    description: "Full-featured shopping app with secure payments, wishlist, and personalized recommendations.",
+    tech: ["Flutter", "Stripe", "REST API", "Push Notifications"],
+    gradient: "from-amber-500/20 to-yellow-500/20",
+    image: ecommerceMockup,
+  },
+  {
+    title: "QuickBite – Food Delivery App",
+    description: "Restaurant ordering platform with real-time tracking and multi-payment options.",
+    tech: ["Flutter", "Google Maps", "Firebase", "Payment Gateway"],
+    gradient: "from-red-500/20 to-orange-500/20",
+    image: foodDeliveryMockup,
   },
 ];
 
@@ -39,12 +69,12 @@ const Portfolio = () => {
               key={index}
               className="group overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div
-                className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}
-              >
-                <div className="text-6xl font-bold text-white/10">
-                  0{index + 1}
-                </div>
+              <div className="h-64 overflow-hidden bg-secondary/50">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">

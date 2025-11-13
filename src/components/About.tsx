@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import ramzanPhoto from "@/assets/ramzan-photo.png";
 
 const stats = [
   "6+ Years Experience",
@@ -15,8 +16,12 @@ const About = () => {
           {/* Image */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl opacity-40 rounded-full"></div>
-            <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-charcoal to-charcoal/80 flex items-center justify-center shadow-2xl overflow-hidden">
-              <div className="text-9xl font-bold text-white/10">RC</div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={ramzanPhoto} 
+                alt="Ramzan Chaudhary - Full-Stack Flutter Developer"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 

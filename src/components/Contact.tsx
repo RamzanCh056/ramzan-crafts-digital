@@ -67,10 +67,10 @@ const Contact = () => {
                 <span>
                   Prefer email?{" "}
                   <a
-                    href="mailto:contact@ramzanch.dev"
+                    href="mailto:ramzanch02@gmail.com"
                     className="text-primary hover:underline font-medium"
                   >
-                    contact@ramzanch.dev
+                    ramzanch02@gmail.com
                   </a>
                 </span>
               </div>
