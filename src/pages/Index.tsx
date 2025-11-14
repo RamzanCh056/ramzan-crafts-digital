@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
       <Pricing />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
       <Toaster />
     </div>
   );
