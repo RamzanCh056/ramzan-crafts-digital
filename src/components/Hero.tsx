@@ -3,8 +3,21 @@ import { ArrowRight } from "lucide-react";
 import heroMockup from "@/assets/hero-mockup.jpg";
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-b from-secondary to-background">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-b from-secondary to-background">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -26,11 +39,20 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base group shadow-lg hover:shadow-xl transition-all">
+              <Button 
+                size="lg" 
+                className="text-base group shadow-lg hover:shadow-xl transition-all"
+                onClick={() => scrollToSection("contact")}
+              >
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="text-base">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-base"
+                onClick={() => scrollToSection("portfolio")}
+              >
                 View My Work
               </Button>
             </div>

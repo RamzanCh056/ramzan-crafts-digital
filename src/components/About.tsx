@@ -10,7 +10,7 @@ const stats = [
 
 const About = () => {
   return (
-    <section className="py-24 px-6 bg-secondary/30">
+    <section id="about" className="py-24 px-6 bg-secondary/30">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}

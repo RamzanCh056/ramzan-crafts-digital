@@ -22,7 +22,7 @@ const pricingOptions = [
 
 const Pricing = () => {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="pricing" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -51,7 +51,11 @@ const Pricing = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="text-base group shadow-lg hover:shadow-xl transition-all">
+          <Button 
+            size="lg" 
+            className="text-base group shadow-lg hover:shadow-xl transition-all"
+            onClick={() => window.open("https://calendly.com/ramzanch02", "_blank")}
+          >
             Book a Free 15-Minute Call
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
