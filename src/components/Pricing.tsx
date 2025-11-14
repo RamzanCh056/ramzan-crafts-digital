@@ -54,9 +54,12 @@ const Pricing = () => {
           <Button 
             size="lg" 
             className="text-base group shadow-lg hover:shadow-xl transition-all"
-            onClick={() => window.open("https://calendly.com/ramzanch02", "_blank")}
+            onClick={() => {
+              const message = encodeURIComponent("Hi Ramzan! I'd like to discuss a project with you.");
+              window.open(`https://wa.me/923144876962?text=${message}`, "_blank");
+            }}
           >
-            Book a Free 15-Minute Call
+            Book a Free 15-Minute Call via WhatsApp
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
