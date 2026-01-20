@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Mail } from "lucide-react";
+import { Instagram, Facebook, Mail, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,6 +11,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/ramzan-ch-2bb2a1192/",
+      icon: Linkedin,
+    },
     {
       name: "Instagram",
       url: "https://www.instagram.com/ramzantech?igsh=NGFsNDV5ZGE0amVr&utm_source=qr",

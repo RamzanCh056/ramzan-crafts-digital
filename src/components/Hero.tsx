@@ -23,19 +23,23 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                $1M+ Revenue Generated for Clients
+              </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                I Build High-Quality Mobile Apps.{" "}
-                <span className="text-gradient">Fast, Beautiful & Scalable.</span>
+                I Build Revenue-Driving{" "}
+                <span className="text-gradient">SaaS & CRM Solutions.</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Flutter · iOS · Android · Web · Desktop · UI/UX · AI Apps
+                Flutter · SaaS · CRM Systems · Mobile Apps · AI Automation · Sales Tools
               </p>
             </div>
 
             <p className="text-lg text-charcoal/80 leading-relaxed max-w-2xl">
-              I'm a full-stack Flutter developer with 6+ years of experience building 
-              production-ready apps for startups, agencies, and founders. I deliver fast, 
-              reliable, end-to-end app development from design to deployment.
+              Full-stack developer with 6+ years building production-ready SaaS platforms, 
+              CRM systems, and mobile apps that drive sales and scale businesses. 
+              From startup MVPs to enterprise solutions—I deliver results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
