@@ -5,12 +5,29 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Determine active section based on scroll position
+      const sections = ["hero", "services", "portfolio", "about", "pricing", "contact"];
+      const scrollPosition = window.scrollY + 150;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -34,8 +51,10 @@ const Header = () => {
     { id: "portfolio", label: "Portfolio" },
     { id: "about", label: "About" },
     { id: "pricing", label: "Pricing" },
-    { id: "contact", label: "Contact" },
   ];
+
+  const whatsappNumber = "923001234567"; // Update with your actual WhatsApp number
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20Ramzan,%20I%20would%20like%20to%20discuss%20a%20project!`;
 
   return (
     <header
@@ -60,7 +79,11 @@ const Header = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === link.id
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
               </button>
@@ -69,11 +92,13 @@ const Header = () => {
 
           <div className="hidden md:block">
             <Button
-              onClick={() => scrollToSection("contact")}
+              asChild
               size="sm"
               className="shadow-lg hover:shadow-xl transition-all"
             >
-              Hire Me
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                Let's Discuss
+              </a>
             </Button>
           </div>
 
@@ -97,17 +122,23 @@ const Header = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors text-left"
+                className={`text-sm font-medium transition-colors text-left ${
+                  activeSection === link.id
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
               </button>
             ))}
             <Button
-              onClick={() => scrollToSection("contact")}
+              asChild
               size="sm"
               className="w-full mt-2"
             >
-              Hire Me
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                Let's Discuss
+              </a>
             </Button>
           </nav>
         )}
