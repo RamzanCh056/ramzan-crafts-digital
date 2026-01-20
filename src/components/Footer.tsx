@@ -1,4 +1,4 @@
-import { Linkedin, Instagram } from "lucide-react";
+import { Instagram, Facebook, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,19 +8,23 @@ const Footer = () => {
     { label: "Services", href: "#services" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
   ];
 
   const socialLinks = [
     {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/ramzan-ch-2bb2a1192/",
-      icon: Linkedin,
+      name: "Instagram",
+      url: "https://www.instagram.com/ramzantech?igsh=NGFsNDV5ZGE0amVr&utm_source=qr",
+      icon: Instagram,
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/ramzan___ch?igsh=MW84YTV3OXQ4MDVmMw%3D%3D&utm_source=qr",
-      icon: Instagram,
+      name: "Facebook",
+      url: "https://www.facebook.com/share/17jFDRSa71/?mibextid=wwXIfr",
+      icon: Facebook,
+    },
+    {
+      name: "Email",
+      url: "mailto:ramzanch02@gmail.com",
+      icon: Mail,
     },
   ];
 
