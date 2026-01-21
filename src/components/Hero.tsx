@@ -3,18 +3,8 @@ import { ArrowRight } from "lucide-react";
 import heroMockup from "@/assets/hero-mockup.jpg";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  const whatsappNumber = "923001234567"; // Update with your actual WhatsApp number
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20Ramzan,%20I%20would%20like%20to%20discuss%20a%20project!`;
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-b from-secondary to-background">
@@ -28,8 +18,8 @@ const Hero = () => {
                 $1M+ Revenue Generated for Clients
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                I Build Revenue-Driving{" "}
-                <span className="text-gradient">SaaS & CRM Solutions.</span>
+                I build mobile and web apps, SaaS platforms, and{" "}
+                <span className="text-gradient">CRM systems that automate sales and drive growth.</span>
               </h1>
               <p className="text-xl text-muted-foreground">
                 Flutter · SaaS · CRM Systems · Mobile Apps · AI Automation · Sales Tools
@@ -46,18 +36,22 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="text-base group shadow-lg hover:shadow-xl transition-all"
-                onClick={() => scrollToSection("contact")}
+                asChild
               >
-                Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="text-base"
-                onClick={() => scrollToSection("portfolio")}
+                asChild
               >
-                View My Work
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Let's Discuss
+                </a>
               </Button>
             </div>
           </div>
