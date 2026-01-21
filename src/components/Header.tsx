@@ -12,7 +12,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Determine active section based on scroll position
-      const sections = ["hero", "services", "portfolio", "about", "pricing", "contact"];
+      const sections = ["hero", "services", "portfolio", "about", "pricing"];
       const scrollPosition = window.scrollY + 150;
 
       for (const sectionId of sections) {
