@@ -23,7 +23,7 @@ const Footer = () => {
     },
     {
       name: "Facebook",
-      url: "https://www.facebook.com/share/17jFDRSa71/?mibextid=wwXIfr",
+      url: "https://www.facebook.com/share/1DfwiCBYcV/?mibextid=wwXIfr",
       icon: Facebook,
     },
     {
