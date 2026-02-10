@@ -53,7 +53,7 @@ const Header = () => {
     { id: "pricing", label: "Pricing" },
   ];
 
-  const whatsappNumber = "923001234567"; // Update with your actual WhatsApp number
+  const whatsappNumber = "923490726084";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20Ramzan,%20I%20would%20like%20to%20discuss%20a%20project!`;
 
   return (
