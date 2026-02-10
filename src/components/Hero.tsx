@@ -17,7 +17,7 @@ const Hero = () => {
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
                 $1M+ Revenue Generated for Clients
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                 I build mobile and web apps, SaaS platforms, and{" "}
                 <span className="text-gradient">CRM systems that automate sales and drive growth.</span>
               </h1>
